@@ -3,10 +3,10 @@ import { FormParagraph, StyledFieldset, StyledInput, StyledButtonParagraph, Radi
 import { StyledButton } from "../Buttons/styled"
 const Form = ({ addNewHelp }) => {
 
-    const [amount, setAmount] = useState();
-    const [title, setTitle] = useState();
-    const [dateOfHelp, setDateOfHelp] = useState();
-    const [from, setFrom] = useState();
+    const [amount, setAmount] = useState("");
+    const [title, setTitle] = useState("");
+    const [dateOfHelp, setDateOfHelp] = useState("");
+    const [from, setFrom] = useState("");
     const helpLaw = "Ustawa o COVID"
 
     const onFormSubmit = (event) => {
