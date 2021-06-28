@@ -1,8 +1,6 @@
 import { ButtonsDiv, StyledButton } from "./styled";
 
 const Buttons = ({ helps, helpFromSource, setHelpFromSource }) => {
-
-
     return (
         !!helps && (
             <ButtonsDiv>
@@ -19,10 +17,7 @@ const Buttons = ({ helps, helpFromSource, setHelpFromSource }) => {
                 </>
             </ButtonsDiv>
         )
-
     );
 };
-
-
 
 export default Buttons;

@@ -16,8 +16,7 @@ export const StyledButton = styled.button`
     ${({ primary }) => primary && css` 
     width:197px;
     margin: 5px 0;
-`} 
-
+    `} 
 
     &:focus {
     background: rgb(218, 213, 213);
@@ -32,6 +31,4 @@ export const StyledButton = styled.button`
         flex-direction: column;
         align-items: center;
     }
-
-
 `;

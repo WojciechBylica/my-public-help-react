@@ -31,7 +31,6 @@ const Table = ({ helps, helpFromSource, removeHelp }) => {
                 </tbody>
             </StyledTable>
         </TableDiv>
-
     );
 };
 

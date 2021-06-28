@@ -1,4 +1,4 @@
-import styled, {css} from "styled-components";
+import styled, { css } from "styled-components";
 
 export const FormParagraph = styled.p`
     margin: 10px 0px 5px 0px;
