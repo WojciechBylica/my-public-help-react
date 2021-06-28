@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/my-public-help-react/static/css/main.873772b0.chunk.css",
-    "main.js": "/my-public-help-react/static/js/main.f4e0bd8e.chunk.js",
-    "main.js.map": "/my-public-help-react/static/js/main.f4e0bd8e.chunk.js.map",
+    "main.js": "/my-public-help-react/static/js/main.aa208786.chunk.js",
+    "main.js.map": "/my-public-help-react/static/js/main.aa208786.chunk.js.map",
     "runtime-main.js": "/my-public-help-react/static/js/runtime-main.2cfb8419.js",
     "runtime-main.js.map": "/my-public-help-react/static/js/runtime-main.2cfb8419.js.map",
     "static/js/2.b607433c.chunk.js": "/my-public-help-react/static/js/2.b607433c.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.2cfb8419.js",
     "static/js/2.b607433c.chunk.js",
     "static/css/main.873772b0.chunk.css",
-    "static/js/main.f4e0bd8e.chunk.js"
+    "static/js/main.aa208786.chunk.js"
   ]
 }
