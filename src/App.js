@@ -5,44 +5,36 @@ import Form from "./Form";
 import Section from "./Section"
 import Table from "./Table";
 import Buttons from "./Buttons";
-import Summary from "./Summary";
 
 function App() {
-  const [helps, setHelps] = useState([
-    {
-      id: 1,
-      amount: 2080,
-      title: "postojowe",
-      date: "2020-10-11",
-      from: "ZUS",
-      law: "ustawa o COVID",
-    },
-    {
-      id: 2,
-      amount: 5000,
-      title: "dotacja",
-      date: "2020-10-12",
-      from: "UP",
-      law: "ustawa o COVID",
-    },
-  ])
+  const [helps, setHelps] = useState("")
   const [helpFromSource, setHelpFromSource] = useState("all");
 
   const addNewHelp = (amount, trimmedTitle, dateOfHelp, from, helpLaw) => {
-    setHelps(tasks => [
-      ...tasks,
+    setHelps(helps => [
+      ...helps,
       {
         amount: +amount,
         title: trimmedTitle,
         date: dateOfHelp,
         from: from,
         law: helpLaw,
-        id: tasks.length ? tasks[tasks.length - 1].id + 1 : 1,
+        id: helps.length ? helps[helps.length - 1].id + 1 : 1,
       }]);
   };
 
   const removeHelp = (id) => {
     setHelps(helps => helps.filter(helps => helps.id !== id));
+  };
+
+  const renderSummary = () => {
+    if (helps) {
+      const sum = (helpFromSource !== "all"
+        ? helps.filter(({ from }) => from === helpFromSource)
+        : helps)
+        .reduce((currentSum, help) => currentSum + +help.amount, 0);
+      return sum;
+    }
   };
 
   return (
@@ -52,13 +44,11 @@ function App() {
         <Section title="wpisz dane:">
           <Form addNewHelp={addNewHelp} />
         </Section>
-
         <Section title="moja pomoc publiczna:">
           <>
             <Buttons helps={helps} helpFromSource={helpFromSource} setHelpFromSource={setHelpFromSource} />
             <Table helps={helps} helpFromSource={helpFromSource} removeHelp={removeHelp} />
-
-            <Summary helps={helps} helpFromSource={helpFromSource} />
+            {!!helps && <Section title="suma otrzymanych środków:">{renderSummary()}{" "}PLN</Section>}
           </>
         </Section>
       </Main>
