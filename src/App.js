@@ -57,14 +57,26 @@ function App() {
         </Section>
         <Section title="moja pomoc publiczna:">
           <>
-            <Buttons helps={helps} helpFromSource={helpFromSource} setHelpFromSource={setHelpFromSource} />
-            <Table helps={helps} helpFromSource={helpFromSource} removeHelp={removeHelp} />
-            {!!helps && <Section title="suma otrzymanych środków:">{renderSummary()}{" "}PLN</Section>}
+            <Buttons
+              helps={helps}
+              helpFromSource={helpFromSource}
+              setHelpFromSource={setHelpFromSource}
+            />
+            <Table
+              helps={helps}
+              helpFromSource={helpFromSource}
+              removeHelp={removeHelp}
+            />
+            {!!helps &&
+              <Section
+                title="suma otrzymanych środków:">
+                {renderSummary()}{" "}PLN
+              </Section>}
           </>
         </Section>
       </Main>
     </>
   );
-}
+};
 
 export default App;
