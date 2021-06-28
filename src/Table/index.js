@@ -9,24 +9,26 @@ const Table = ({ helps, helpFromSource, removeHelp }) => {
     return (
         <TableDiv>
             <StyledTable>
-                {!!helps && helpsVariant.map(
-                    help => (
-                        <tr key={help.id}>
-                            <StyledTableTh scope="row">{help.amount}</StyledTableTh>
-                            <StyledTableTh as="td">{help.title}</StyledTableTh>
-                            <StyledTableTh as="td">{help.date}</StyledTableTh>
-                            <StyledTableTh as="td">{help.from}</StyledTableTh>
-                            <StyledTableTh as="td">{help.law}</StyledTableTh>
-                            {helpFromSource === "all"
-                                ? <StyledTableTh as="td" primary>
-                                    <StyledButton onClick={() => removeHelp(help.id)}>
-                                        usuń
-                                    </StyledButton>
-                                </StyledTableTh>
-                                : ""}
-                        </tr>
-                    )
-                )}
+                <tbody>
+                    {!!helps && helpsVariant.map(
+                        help => (
+                            <tr key={help.id}>
+                                <StyledTableTh scope="row">{help.amount}</StyledTableTh>
+                                <StyledTableTh as="td">{help.title}</StyledTableTh>
+                                <StyledTableTh as="td">{help.date}</StyledTableTh>
+                                <StyledTableTh as="td">{help.from}</StyledTableTh>
+                                <StyledTableTh as="td">{help.law}</StyledTableTh>
+                                {helpFromSource === "all"
+                                    ? <StyledTableTh as="td" primary>
+                                        <StyledButton onClick={() => removeHelp(help.id)}>
+                                            usuń
+                                        </StyledButton>
+                                    </StyledTableTh>
+                                    : ""}
+                            </tr>
+                        )
+                    )}
+                </tbody>
             </StyledTable>
         </TableDiv>
 
