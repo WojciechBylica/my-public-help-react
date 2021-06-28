@@ -1,6 +1,10 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const StyledSection = styled.section`
-    background: #27a5e2ad;
+    
     padding: 0 5px;
+
+    /* ${({ primary }) => primary && css` 
+    background: none;
+`}  */
 `;
