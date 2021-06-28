@@ -11,7 +11,7 @@
  Datas from the list are demanded by UP and ZUS during aplication fo public help.
 
 ## preview - big screen
-![preview - big screen](/src/images/bigScreemPreview.png)
+![preview - big screen](/src/images/bigScreenPreview.png)
 
 ## preview - small screen
 ![preview - small screen](/src/images/PreviewBigScreen.png)
