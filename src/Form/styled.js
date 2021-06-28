@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, {css} from "styled-components";
 
 export const FormParagraph = styled.p`
     margin: 10px 0px 5px 0px;
@@ -14,6 +14,11 @@ export const StyledFieldset = styled.fieldset`
     width: 195px;
     border: 1px solid #ccc;;
     border-radius: 2px;
+
+    ${({ primary }) => primary && css` 
+    display: flex;
+    justify-content: space-around;
+`} 
 `;
 
 export const StyledInput = styled.input`
