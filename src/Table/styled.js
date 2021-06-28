@@ -19,5 +19,13 @@ export const StyledTableTh = styled.th`
 
     ${({ primary }) => primary && css` 
     padding: 2px;
-`} 
+    `} 
+
+    ${({ secondary }) => secondary && css` 
+    word-break: break-word;
+    `}
+
+    @media (max-width: 500px) {
+        word-break: initial;
+    }
 `;

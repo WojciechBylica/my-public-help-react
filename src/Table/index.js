@@ -13,8 +13,8 @@ const Table = ({ helps, helpFromSource, removeHelp }) => {
                     {!!helps && helpsVariant.map(
                         help => (
                             <tr key={help.id}>
-                                <StyledTableTh scope="row">{help.amount}</StyledTableTh>
-                                <StyledTableTh as="td">{help.title}</StyledTableTh>
+                                <StyledTableTh secondary scope="row">{help.amount}</StyledTableTh>
+                                <StyledTableTh secondary as="td">{help.title}</StyledTableTh>
                                 <StyledTableTh as="td">{help.date}</StyledTableTh>
                                 <StyledTableTh as="td">{help.from}</StyledTableTh>
                                 <StyledTableTh as="td">{help.law}</StyledTableTh>
