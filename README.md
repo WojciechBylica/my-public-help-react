@@ -14,7 +14,7 @@
 ![preview - big screen](/src/images/bigScreenPreview.png)
 
 ## preview - small screen
-![preview - small screen](/src/images/PreviewBigScreen.png)
+![preview - small screen](/src/images/mobilePreview.gif)
 
 ### technology used to build the list
 
