@@ -1,4 +1,5 @@
 import { TableDiv, StyledTable, StyledTableTh, } from "./styled";
+import { StyledButton } from "../Buttons/styled";
 
 const Table = ({ helps, helpFromSource, removeHelp }) => {
 
@@ -18,9 +19,9 @@ const Table = ({ helps, helpFromSource, removeHelp }) => {
                             <StyledTableTh as="td">{help.law}</StyledTableTh>
                             {helpFromSource === "all"
                                 ? <StyledTableTh as="td" primary>
-                                    <button onClick={() => removeHelp(help.id)}>
+                                    <StyledButton onClick={() => removeHelp(help.id)}>
                                         usuń
-                                    </button>
+                                    </StyledButton>
                                 </StyledTableTh>
                                 : ""}
                         </tr>
