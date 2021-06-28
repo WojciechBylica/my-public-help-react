@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const ButtonsDiv = styled.div`
     display: flex;
@@ -12,6 +12,12 @@ export const StyledButton = styled.button`
     padding: 10px;
     margin: 10px;
     cursor: pointer;
+
+    ${({ primary }) => primary && css` 
+    width:197px;
+    margin: 5px 0;
+`} 
+
 
     &:focus {
     background: rgb(218, 213, 213);

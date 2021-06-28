@@ -1,5 +1,6 @@
 import { useState } from "react";
-
+import { FormParagraph, StyledFieldset, StyledInput } from "./styled"
+import { StyledButton } from "../Buttons/styled"
 const Form = ({ addNewHelp }) => {
 
     const [amount, setAmount] = useState();
@@ -7,9 +8,6 @@ const Form = ({ addNewHelp }) => {
     const [dateOfHelp, setDateOfHelp] = useState();
     const [from, setFrom] = useState();
     const helpLaw = "Ustawa o COVID"
-
-
-
 
     const onFormSubmit = (event) => {
         event.preventDefault();
@@ -25,11 +23,10 @@ const Form = ({ addNewHelp }) => {
     return (
         <form onSubmit={onFormSubmit}>
             <label>
-                <p className="form__paragraph">kwota w PLN</p>
-                <input
+                <FormParagraph>kwota w PLN</FormParagraph>
+                <StyledInput
                     value={amount}
                     onChange={({ target }) => setAmount(target.value)}
-                    className="form__input"
                     type="number"
                     step="0.01"
                     min="0.01"
@@ -37,28 +34,26 @@ const Form = ({ addNewHelp }) => {
                 />
             </label>
             <label>
-                <p className="form__paragraph">rodzaj pomocy</p>
-                <input
+                <FormParagraph>rodzaj pomocy</FormParagraph>
+                <StyledInput
                     value={title}
                     onChange={({ target }) => setTitle(target.value)}
-                    className="form__input"
                     type="text"
                     required
                 />
             </label>
             <label>
-                <p className="form__paragraph">data otrzymania</p>
-                <input
+                <FormParagraph>data otrzymania</FormParagraph>
+                <StyledInput
                     value={dateOfHelp}
                     onChange={({ target }) => setDateOfHelp(target.value)}
-                    className="form__input"
                     type="date"
                     required
                 />
             </label>
             <label>
-                <p className="form__paragraph">źródło pomocy</p>
-                <fieldset className="form__fieldset">
+                <FormParagraph>źródło pomocy</FormParagraph>
+                <StyledFieldset>
                     <label>
                         ZUS
                         <input
@@ -78,17 +73,17 @@ const Form = ({ addNewHelp }) => {
                             value="UP"
                         />
                     </label>
-                </fieldset>
+                </StyledFieldset>
             </label>
             <label>
-                <p className="form__paragraph">Podstawa prawna</p>
-                <input
-                    className="form__input"
+                <FormParagraph>Podstawa prawna</FormParagraph>
+                <StyledInput
                     placeholder="ustawa o COVID"
                     readOnly
-                    value="ustawa o COVID" />
+                    value="ustawa o COVID"
+                />
             </label>
-            <p><button className="button button--form">Wpisz na listę</button></p>
+            <p><StyledButton primary>Wpisz na listę</StyledButton></p>
         </form>
     );
 };
