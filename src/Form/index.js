@@ -53,7 +53,7 @@ const Form = ({ addNewHelp }) => {
             </label>
             <RadioLabel>
                 <FormParagraph>źródło pomocy</FormParagraph>
-                <StyledFieldset>
+                <StyledFieldset primary>
                     <label>
                         ZUS
                         <input
