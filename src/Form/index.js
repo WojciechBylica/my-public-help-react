@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { FormParagraph, StyledFieldset, StyledInput, StyledButtonParagraph, RadioLabel } from "./styled"
+import { FormParagraph, StyledFieldset, StyledInput, StyledButtonParagraph, RadioLabel} from "./styled"
 import { StyledButton } from "../Buttons/styled"
 const Form = ({ addNewHelp }) => {
 
@@ -25,6 +25,7 @@ const Form = ({ addNewHelp }) => {
             <label>
                 <FormParagraph>kwota w PLN</FormParagraph>
                 <StyledInput
+                    value={amount}
                     onChange={({ target }) => setAmount(target.value)}
                     type="number"
                     step="0.01"
@@ -35,6 +36,7 @@ const Form = ({ addNewHelp }) => {
             <label>
                 <FormParagraph>rodzaj pomocy</FormParagraph>
                 <StyledInput
+                    value={title}
                     onChange={({ target }) => setTitle(target.value)}
                     type="text"
                     required
@@ -43,6 +45,7 @@ const Form = ({ addNewHelp }) => {
             <label>
                 <FormParagraph>data otrzymania</FormParagraph>
                 <StyledInput
+                    value={dateOfHelp}
                     onChange={({ target }) => setDateOfHelp(target.value)}
                     type="date"
                     required
@@ -77,6 +80,7 @@ const Form = ({ addNewHelp }) => {
                 <StyledInput
                     placeholder="ustawa o COVID"
                     readOnly
+                    value="ustawa o COVID"
                 />
             </label>
             <StyledButtonParagraph >
