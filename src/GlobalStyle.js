@@ -18,5 +18,11 @@ html {
     margin: 0 auto;
     font-size: 16px;
     font-family: 'Jura', sans-serif;
+    
+}
+
+#root {
+    text-align: center;
 }
 `
+

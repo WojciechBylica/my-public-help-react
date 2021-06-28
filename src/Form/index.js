@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { FormParagraph, StyledFieldset, StyledInput } from "./styled"
+import { FormParagraph, StyledFieldset, StyledInput, StyledButtonParagraph, RadioLabel} from "./styled"
 import { StyledButton } from "../Buttons/styled"
 const Form = ({ addNewHelp }) => {
 
@@ -51,7 +51,7 @@ const Form = ({ addNewHelp }) => {
                     required
                 />
             </label>
-            <label>
+            <RadioLabel>
                 <FormParagraph>źródło pomocy</FormParagraph>
                 <StyledFieldset>
                     <label>
@@ -74,7 +74,7 @@ const Form = ({ addNewHelp }) => {
                         />
                     </label>
                 </StyledFieldset>
-            </label>
+            </RadioLabel>
             <label>
                 <FormParagraph>Podstawa prawna</FormParagraph>
                 <StyledInput
@@ -83,7 +83,11 @@ const Form = ({ addNewHelp }) => {
                     value="ustawa o COVID"
                 />
             </label>
-            <p><StyledButton primary>Wpisz na listę</StyledButton></p>
+            <StyledButtonParagraph >
+                <StyledButton primary>
+                    Wpisz na listę
+                </StyledButton>
+            </StyledButtonParagraph>
         </form>
     );
 };
