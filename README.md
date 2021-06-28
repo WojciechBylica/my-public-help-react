@@ -3,7 +3,7 @@
 - date; 27.06.2021
 ## link
 
- 
+ https://wojciechbylica.github.io/my-public-help-react/
 
  ## description
  
@@ -11,10 +11,10 @@
  Datas from the list are demanded by UP and ZUS during aplication fo public help.
 
 ## preview - big screen
-![preview - big screen](/src/images/PreviewBigScreen.png)
+![preview - big screen](/src/images/previewBigScreen.png)
 
 ## preview - small screen
-![preview - small screen](/src/images/previewSmallScreen.gif)
+![preview - small screen](/src/images/mobilePreview.gif)
 
 ### technology used to build the list
 
