@@ -6,10 +6,7 @@ import Section from "./Section"
 import Table from "./Table";
 import Buttons from "./Buttons";
 
-
-
 function App() {
-
   const getInitialHelps = () => {
     const helpsFromLocalStorage = localStorage.getItem("savedHelps");
     return helpsFromLocalStorage
@@ -46,8 +43,6 @@ function App() {
       return sum;
     }
   };
-
-
 
   useEffect(() => {
     localStorage.setItem("savedHelps", JSON.stringify(helps));
