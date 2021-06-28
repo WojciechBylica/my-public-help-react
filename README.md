@@ -11,10 +11,10 @@
  Datas from the list are demanded by UP and ZUS during aplication fo public help.
 
 ## preview - big screen
-![preview - big screen](/src/images/previewBigScreen.png)
+![preview - big screen](/src/images/bigScreemPreview.png)
 
 ## preview - small screen
-![preview - small screen](/src/images/mobilePreview.gif)
+![preview - small screen](/src/images/PreviewBigScreen.png)
 
 ### technology used to build the list
 
