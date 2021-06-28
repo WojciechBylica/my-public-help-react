@@ -8,7 +8,7 @@
  ## description
  
  List of public help is a tool designed for listing public help grants in polish finansial reality during COVID'19 pandemic time. 
- Datas from the list are demanded by UP and ZUS during aplication fo public help.
+ Datas from the list are demanded by UP and ZUS during aplication fo public help. 
 
 ## preview - big screen
 ![preview - big screen](/src/images/bigScreenPreview.png)
@@ -26,6 +26,7 @@
 - flex
 - react
 - babel
+- JSON - localStorage
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
