@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Header from "./Header";
 import Main from "./Main";
 import Form from "./Form";
@@ -6,8 +6,18 @@ import Section from "./Section"
 import Table from "./Table";
 import Buttons from "./Buttons";
 
+
+
 function App() {
-  const [helps, setHelps] = useState("")
+
+  const getInitialHelps = () => {
+    const helpsFromLocalStorage = localStorage.getItem("savedHelps");
+    return helpsFromLocalStorage
+      ? JSON.parse(helpsFromLocalStorage)
+      : [];
+  };
+
+  const [helps, setHelps] = useState(getInitialHelps);
   const [helpFromSource, setHelpFromSource] = useState("all");
 
   const addNewHelp = (amount, trimmedTitle, dateOfHelp, from, helpLaw) => {
@@ -36,6 +46,12 @@ function App() {
       return sum;
     }
   };
+
+
+
+  useEffect(() => {
+    localStorage.setItem("savedHelps", JSON.stringify(helps));
+  }, [helps]);
 
   return (
     <>
