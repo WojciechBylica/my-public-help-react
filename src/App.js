@@ -67,7 +67,7 @@ function App() {
               helpFromSource={helpFromSource}
               removeHelp={removeHelp}
             />
-            {!!helps &&
+            {!!helps.length &&
               <Section
                 title="suma otrzymanych środków:">
                 {renderSummary()}{" "}PLN

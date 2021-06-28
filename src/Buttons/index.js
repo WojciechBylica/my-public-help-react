@@ -1,9 +1,9 @@
 import { ButtonsDiv, StyledButton } from "./styled";
 
-const Buttons = ({ helps, helpFromSource, setHelpFromSource }) => {
+const Buttons = ({ helps, setHelpFromSource }) => {
     return (
-        !!helps && (
-            <ButtonsDiv>
+        !!helps.length &&
+             <ButtonsDiv>
                 <>
                     <StyledButton onClick={() => setHelpFromSource("ZUS")}>
                         pokaż pomoc z zus
@@ -16,7 +16,8 @@ const Buttons = ({ helps, helpFromSource, setHelpFromSource }) => {
                     </StyledButton>
                 </>
             </ButtonsDiv>
-        )
+            
+    
     );
 };
 
