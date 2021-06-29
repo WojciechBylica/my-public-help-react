@@ -1,8 +1,8 @@
 import { useState, useRef, } from "react";
 import { FormParagraph, StyledFieldset, StyledInput, StyledButtonParagraph, RadioLabel } from "./styled"
 import { StyledButton } from "../Buttons/styled"
-const Form = ({ addNewHelp }) => {
 
+const Form = ({ addNewHelp }) => {
     const [amount, setAmount] = useState("");
     const [title, setTitle] = useState("");
     const [dateOfHelp, setDateOfHelp] = useState("");
