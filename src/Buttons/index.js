@@ -6,7 +6,7 @@ const Buttons = ({ helps, setHelpFromSource }) => {
              <ButtonsDiv>
                 <>
                     <StyledButton onClick={() => setHelpFromSource("ZUS")}>
-                        pokaż pomoc z zus
+                        pokaż pomoc z ZUS
                     </StyledButton>
                     <StyledButton onClick={() => setHelpFromSource("UP")} >
                         pokaż pomoc z UP

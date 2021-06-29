@@ -84,7 +84,7 @@ const Form = ({ addNewHelp }) => {
                 </StyledFieldset>
             </RadioLabel>
             <label>
-                <FormParagraph>Podstawa prawna</FormParagraph>
+                <FormParagraph>podstawa prawna</FormParagraph>
                 <StyledInput
                     onChange={({ target }) => setHelpLaw(target.value)}
                     placeholder={helpLaw}
