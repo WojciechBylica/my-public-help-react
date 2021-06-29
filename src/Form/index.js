@@ -7,7 +7,7 @@ const Form = ({ addNewHelp }) => {
     const [title, setTitle] = useState("");
     const [dateOfHelp, setDateOfHelp] = useState("");
     const [from, setFrom] = useState("");
-    const helpLaw = "Ustawa o COVID"
+    const helpLaw = "Ustawa o COVID";
 
     const onFormSubmit = (event) => {
         event.preventDefault();
@@ -65,9 +65,9 @@ const Form = ({ addNewHelp }) => {
                         ZUS
                         <input
                             onChange={({ target }) => setFrom(target.value)}
+                            value="ZUS"
                             type="radio"
                             name="source"
-                            value="ZUS"
                             required
                         />
                     </label>
@@ -75,9 +75,9 @@ const Form = ({ addNewHelp }) => {
                         UP
                         <input
                             onChange={({ target }) => setFrom(target.value)}
+                            value="UP"
                             type="radio"
                             name="source"
-                            value="UP"
                         />
                     </label>
                 </StyledFieldset>
