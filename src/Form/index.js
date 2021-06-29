@@ -88,7 +88,6 @@ const Form = ({ addNewHelp }) => {
                 <StyledInput
                     onChange={({ target }) => setHelpLaw(target.value)}
                     placeholder={helpLaw}
-                    // readOnly
                     value={helpLaw}
                     type="text"
                     required
