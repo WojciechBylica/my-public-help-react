@@ -7,7 +7,7 @@ const Form = ({ addNewHelp }) => {
     const [title, setTitle] = useState("");
     const [dateOfHelp, setDateOfHelp] = useState("");
     const [from, setFrom] = useState("");
-    const helpLaw = "Ustawa o COVID";
+    const [helpLaw, setHelpLaw] = useState("Ustawa o COVID");
 
     const onFormSubmit = (event) => {
         event.preventDefault();
@@ -17,6 +17,7 @@ const Form = ({ addNewHelp }) => {
             setAmount("");
             setTitle("");
             setDateOfHelp("");
+            setHelpLaw("Ustawa o COVID");
         };
     };
 
@@ -85,9 +86,12 @@ const Form = ({ addNewHelp }) => {
             <label>
                 <FormParagraph>Podstawa prawna</FormParagraph>
                 <StyledInput
-                    placeholder="ustawa o COVID"
-                    readOnly
-                    value="ustawa o COVID"
+                    onChange={({ target }) => setHelpLaw(target.value)}
+                    placeholder={helpLaw}
+                    // readOnly
+                    value={helpLaw}
+                    type="text"
+                    required
                 />
             </label>
             <StyledButtonParagraph >
