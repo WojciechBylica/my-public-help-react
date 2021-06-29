@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, } from "react";
 import { FormParagraph, StyledFieldset, StyledInput, StyledButtonParagraph, RadioLabel } from "./styled"
 import { StyledButton } from "../Buttons/styled"
 const Form = ({ addNewHelp }) => {
@@ -25,16 +25,13 @@ const Form = ({ addNewHelp }) => {
         inputRef.current.focus()
     };
 
-    useEffect(() => {
-        inputRef.current.focus()
-    }, [inputRef]);
-
     return (
         <form onSubmit={onFormSubmit}>
             <label>
                 <FormParagraph>kwota w PLN</FormParagraph>
                 <StyledInput
                     ref={inputRef}
+                    autoFocus
                     value={amount}
                     onChange={({ target }) => setAmount(target.value)}
                     type="number"
@@ -94,7 +91,9 @@ const Form = ({ addNewHelp }) => {
                 />
             </label>
             <StyledButtonParagraph >
-                <StyledButton primary onClick={focusInput}>
+                <StyledButton primary
+                    onClick={focusInput}
+                >
                     Wpisz na listę
                 </StyledButton>
             </StyledButtonParagraph>
