@@ -19,14 +19,14 @@ export const StyledButton = styled.button`
     `} 
 
     &:focus {
-    background: rgb(218, 213, 213);
+    background: ${({theme}) => theme.White};
     }
 
     &:hover {
-    background: rgb(243, 238, 238);
+    background: ${({theme}) => theme.Grey};
     }
 
-    @media (max-width:500px) {
+    @media (max-width:${({theme}) => theme.Breakpoint.Mobile}px) {
         display: flex;
         flex-direction: column;
         align-items: center;
