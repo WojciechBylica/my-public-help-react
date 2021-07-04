@@ -29,3 +29,7 @@ export const StyledTableTh = styled.th`
         word-break: initial;
     }
 `;
+export const StyledCaption = styled.caption`
+    caption-side: bottom;
+    margin-top: 10px;
+`;
