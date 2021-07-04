@@ -8,16 +8,29 @@ const Form = ({ addNewHelp }) => {
     const [dateOfHelp, setDateOfHelp] = useState("");
     const [from, setFrom] = useState("");
     const [helpLaw, setHelpLaw] = useState("Ustawa o COVID");
+    const [ZUS, setZUSHelp] = useState("");
+    const [UP, setUPHelp] = useState("");
 
     const onFormSubmit = (event) => {
         event.preventDefault();
+        console.log(from);
+        // console.log(UP);
+        // if (ZUS) {
+        //     setFrom("ZUS");
+        // };
+        // if (UP) {
+        //     setFrom("UP");
+        // };
         const trimmedTitle = title.trim();
         if (trimmedTitle) {
+            console.log(from)
             addNewHelp(amount, trimmedTitle, dateOfHelp, from, helpLaw);
             setAmount("");
             setTitle("");
             setDateOfHelp("");
             setHelpLaw("Ustawa o COVID");
+            setZUSHelp("");
+            setUPHelp("")
         };
     };
 
@@ -65,7 +78,11 @@ const Form = ({ addNewHelp }) => {
                     <label>
                         ZUS
                         <input
-                            onChange={({ target }) => setFrom(target.value)}
+                            checked={ZUS}
+                            onChange={({ target }) => {
+                                setZUSHelp(target.checked);
+                                setFrom(target.value);
+                            }}
                             value="ZUS"
                             type="radio"
                             name="source"
@@ -75,7 +92,11 @@ const Form = ({ addNewHelp }) => {
                     <label>
                         UP
                         <input
-                            onChange={({ target }) => setFrom(target.value)}
+                            checked={UP}
+                            onChange={({ target }) => {
+                                setUPHelp(target.checked);
+                                setFrom(target.value);
+                            }}
                             value="UP"
                             type="radio"
                             name="source"
