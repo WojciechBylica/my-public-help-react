@@ -1,4 +1,4 @@
-import { TableDiv, StyledTable, StyledTableTh, } from "./styled";
+import { TableDiv, StyledTable, StyledTableTh, StyledCaption} from "./styled";
 import { StyledButton } from "../Buttons/styled";
 
 const Table = ({ helps, helpFromSource, removeHelp }) => {
@@ -6,18 +6,18 @@ const Table = ({ helps, helpFromSource, removeHelp }) => {
     const helpsVariant = (helpFromSource !== "all"
         ? helps.filter(({ from }) => from === helpFromSource)
         : helps);
-    return (
+    return !!helps.length && (
         <TableDiv>
             <StyledTable>
+                <StyledCaption>podstawa prawna: ustawa z dnia 2 marca 2020 r. (Dz. U. poz. 1842, z późn. zm.)</StyledCaption>
                 <tbody>
-                    {!!helps && helpsVariant.map(
+                    {helpsVariant.map(
                         help => (
                             <tr key={help.id}>
                                 <StyledTableTh secondary scope="row">{help.amount}</StyledTableTh>
                                 <StyledTableTh secondary as="td">{help.title}</StyledTableTh>
                                 <StyledTableTh as="td">{help.date}</StyledTableTh>
                                 <StyledTableTh as="td">{help.from}</StyledTableTh>
-                                <StyledTableTh as="td">{help.law}</StyledTableTh>
                                 {helpFromSource === "all"
                                     ? <StyledTableTh as="td" primary>
                                         <StyledButton onClick={() => removeHelp(help.id)}>
