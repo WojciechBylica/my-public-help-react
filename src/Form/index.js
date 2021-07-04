@@ -20,7 +20,6 @@ const Form = ({ addNewHelp }) => {
         // };
         const trimmedTitle = title.trim();
         if (trimmedTitle) {
-            console.log(from)
             addNewHelp(amount, trimmedTitle, dateOfHelp, from);
             setAmount("");
             setTitle("");
