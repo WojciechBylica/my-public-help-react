@@ -1,8 +1,7 @@
-import { TableDiv, StyledTable, StyledTableTh, StyledCaption} from "./styled";
+import { TableDiv, StyledTable, StyledTableTh, StyledCaption } from "./styled";
 import { StyledButton } from "../Buttons/styled";
 
 const Table = ({ helps, helpFromSource, removeHelp }) => {
-
     const helpsVariant = (helpFromSource !== "all"
         ? helps.filter(({ from }) => from === helpFromSource)
         : helps);
