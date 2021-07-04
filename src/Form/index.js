@@ -7,14 +7,11 @@ const Form = ({ addNewHelp }) => {
     const [title, setTitle] = useState("");
     const [dateOfHelp, setDateOfHelp] = useState("");
     const [from, setFrom] = useState("");
-    const [helpLaw, setHelpLaw] = useState("Ustawa o COVID");
     const [ZUS, setZUSHelp] = useState("");
     const [UP, setUPHelp] = useState("");
 
     const onFormSubmit = (event) => {
         event.preventDefault();
-        console.log(from);
-        // console.log(UP);
         // if (ZUS) {
         //     setFrom("ZUS");
         // };
@@ -24,11 +21,10 @@ const Form = ({ addNewHelp }) => {
         const trimmedTitle = title.trim();
         if (trimmedTitle) {
             console.log(from)
-            addNewHelp(amount, trimmedTitle, dateOfHelp, from, helpLaw);
+            addNewHelp(amount, trimmedTitle, dateOfHelp, from);
             setAmount("");
             setTitle("");
             setDateOfHelp("");
-            setHelpLaw("Ustawa o COVID");
             setZUSHelp("");
             setUPHelp("")
         };
@@ -104,16 +100,6 @@ const Form = ({ addNewHelp }) => {
                     </label>
                 </StyledFieldset>
             </RadioLabel>
-            <label>
-                <FormParagraph>podstawa prawna</FormParagraph>
-                <StyledInput
-                    onChange={({ target }) => setHelpLaw(target.value)}
-                    placeholder={helpLaw}
-                    value={helpLaw}
-                    type="text"
-                    required
-                />
-            </label>
             <StyledButtonParagraph >
                 <StyledButton primary
                     onClick={focusInput}
