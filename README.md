@@ -1,6 +1,6 @@
 # react-public-help-list
 - coded by: Wojciech Bylica
-- date; 27.06.2021
+- date: 27.06.2021
 
 ![og-image](/public/ogImage.png)
 ## link
