@@ -2,7 +2,7 @@
 - coded by: Wojciech Bylica
 - date; 27.06.2021
 
-![og-image](/public/images/ogImage.png)
+![og-image](/public/ogImage.png)
 ## link
 
  https://wojciechbylica.github.io/my-public-help-react/
