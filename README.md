@@ -1,6 +1,8 @@
-# list-of-public-help
+# react-public-help-list
 - coded by: Wojciech Bylica
 - date; 27.06.2021
+
+![og-image](/public/images/ogImage.png)
 ## link
 
  https://wojciechbylica.github.io/my-public-help-react/
@@ -9,14 +11,7 @@
  
  List of public help is a tool designed for listing public help grants in polish finansial reality during COVID'19 pandemic time. 
  Datas from the list are demanded by UP and ZUS during aplication fo public help. 
-
-## preview - big screen
-![preview - big screen](/src/images/bigScreenPreview.png)
-
-## preview - small screen
-![preview - small screen](/src/images/mobilePreview.gif)
-
-### technology used to build the list
+### technology and concepts used to build the list:
 
 - html
 - styled components
