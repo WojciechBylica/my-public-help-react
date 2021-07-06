@@ -7,25 +7,16 @@ const Form = ({ addNewHelp }) => {
     const [title, setTitle] = useState("");
     const [dateOfHelp, setDateOfHelp] = useState("");
     const [from, setFrom] = useState("");
-    const [ZUS, setZUSHelp] = useState("");
-    const [UP, setUPHelp] = useState("");
 
     const onFormSubmit = (event) => {
         event.preventDefault();
-        // if (ZUS) {
-        //     setFrom("ZUS");
-        // };
-        // if (UP) {
-        //     setFrom("UP");
-        // };
         const trimmedTitle = title.trim();
         if (trimmedTitle) {
             addNewHelp(amount, trimmedTitle, dateOfHelp, from);
             setAmount("");
             setTitle("");
             setDateOfHelp("");
-            setZUSHelp("");
-            setUPHelp("")
+            setFrom("")
         };
     };
 
@@ -73,28 +64,20 @@ const Form = ({ addNewHelp }) => {
                     <label>
                         ZUS
                         <input
-                            checked={ZUS}
-                            onChange={({ target }) => {
-                                setZUSHelp(target.checked);
-                                setFrom(target.value);
-                            }}
+                            checked={from === "ZUS"}
+                            onChange={({ target }) => setFrom(target.value)}
                             value="ZUS"
                             type="radio"
-                            name="source"
                             required
                         />
                     </label>
                     <label>
                         UP
                         <input
-                            checked={UP}
-                            onChange={({ target }) => {
-                                setUPHelp(target.checked);
-                                setFrom(target.value);
-                            }}
+                            checked={from === "UP"}
+                            onChange={({ target }) => setFrom(target.value)}
                             value="UP"
                             type="radio"
-                            name="source"
                         />
                     </label>
                 </StyledFieldset>
